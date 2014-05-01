@@ -1,0 +1,126 @@
+.Element{
+	z-index: 1;
+	position: absolute;
+	display: inline-block;
+	width: 33.3333%;
+	top:52px;
+	cursor: pointer;
+	height: calc(100% - 52px);
+	height: -webkit-calc(100% - 52px);
+	height: -moz-calc(100% - 52px)
+}
+.ElementRes{
+	z-index: 1;
+	position: relative;
+	display:block;
+	width: 100%;
+	height: 400px;
+	top: 0px;
+	left: -00px;
+	cursor: pointer;
+} 
+.Text{
+	position: static;
+	right: 0px;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 200px 200px 0px 0px;
+	border-color: #fff transparent transparent transparent;
+	 transition:all .3s;
+ 	-moz-transition:all .3s;
+ 	-o-transition:all .3s;
+ 	-ms-transition:all .3s;
+ 	-webkit-transition:all .3s;
+}
+.Element:hover .Text{
+	border-width: 0px 0px 0px 0px;
+	width: 100%;
+	height: 40px;
+	background-color: #fff;
+	top: 52px;
+	text-align: center;
+}
+.Element:hover .TextCont{
+	top:0px;
+	width: 100%;
+}
+.TextCont{
+	position: relative;
+	left: 10px;
+	top:-190px;
+	font-size: 25px;
+	font-family: Helvetica;
+	color:#3d3d3d;
+	transition:all .3s;
+ 	-moz-transition:all .3s;
+ 	-o-transition:all .3s;
+ 	-ms-transition:all .3s;
+ 	-webkit-transition:all .3s;
+}
+.Element1{	
+	left: 0px;
+	background: url(../Img/Teacher.jpg) top left;
+	background-repeat: none;
+	background-size: cover;
+	 transition:all 1s;
+ 	-moz-transition:all 1s;
+ 	-o-transition:all 1s;
+ 	-ms-transition:all 1s;
+ 	-webkit-transition:all 1s;
+}
+.Element1:hover{	
+	left: 0%;
+	background: url(../Img/TeacherBW.jpg) top center;
+	background-repeat: none;
+	background-size: cover;
+	 transition:all 1s;
+ 	-moz-transition:all 1s;
+ 	-o-transition:all 1s;
+ 	-ms-transition:all 1s;
+ 	-webkit-transition:all 1s;
+}
+.Element2{	
+	left: 33.33333%;
+	background: url(../Img/Student.jpg) top left;
+	background-repeat: none;
+	background-size: cover;
+	 transition:all 1s;
+ 	-moz-transition:all 1s;
+ 	-o-transition:all 1s;
+ 	-ms-transition:all 1s;
+ 	-webkit-transition:all 1s;
+}
+.Element2:hover{
+	left: 33.33333%;
+	background: url(../Img/StudentBW.jpg) top center;
+	background-repeat: none;
+	background-size: cover;
+	 transition:all 1s;
+ 	-moz-transition:all 1s;
+ 	-o-transition:all 1s;
+ 	-ms-transition:all 1s;
+ 	-webkit-transition:all 1s;
+}
+.Element3{
+	left: 66.66666%;
+	background: url(../Img/Other.jpg) top left;
+	background-repeat: none;
+	background-size: cover;
+	 transition:all 1s;
+ 	-moz-transition:all 1s;
+ 	-o-transition:all 1s;
+ 	-ms-transition:all 1s;
+ 	-webkit-transition:all 1s;
+}
+.Element3:hover{
+	left:66.66666%;
+	background: url(../Img/OtherBW.jpg) top center;
+	background-repeat: none;
+	background-size: cover;
+	 transition:all 1s;
+ 	-moz-transition:all 1s;
+ 	-o-transition:all 1s;
+ 	-ms-transition:all 1s;
+ 	-webkit-transition:all 1s;
+}

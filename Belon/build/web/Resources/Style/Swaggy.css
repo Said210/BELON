@@ -1,0 +1,479 @@
+/*
+quu..__
+ $$$b  `---.__
+  "$$b        `--.                          ___.---uuudP
+   `$$b           `.__.------.__     __.---'      $$$$"              .
+     "$b          -'            `-.-'            $$$"              .'|
+       ".                                       d$"             _.'  |
+         `.   /                              ..."             .'     |
+           `./                           ..::-'            _.'       |
+            /                         .:::-'            .-'         .'
+           :                          ::''\          _.'            |
+          .' .-.             .-.           `.      .'               |
+          : /'$$|           .@"$\           `.   .'              _.-'
+         .'|$u$$|          |$$,$$|           |  <            _.-'
+         | `:$$:'          :$$$$$:           `.  `.       .-'
+         :                  `"--'             |    `-.     \
+        :##.       ==             .###.       `.      `.    `\
+        |##:                      :###:        |        >     >      ███████╗██╗    ██╗ █████╗  ██████╗ 
+        |#'     `..'`..'          `###'        x:      /     /       ██╔════╝██║    ██║██╔══██╗██╔════╝
+         \                                   xXX|     /    ./        ███████╗██║ █╗ ██║███████║██║  ███╗
+          \                                xXXX'|    /   ./          ╚════██║██║███╗██║██╔══██║██║   ██║
+          /`-.                                  `.  /   /            ███████║╚███╔███╔╝██║  ██║╚██████╔╝
+         :    `-  ...........,                   | /  .'             ╚══════╝ ╚══╝╚══╝ ╚═╝  ╚═╝ ╚═════╝ 
+         |         ``:::::::'       .            |<    `.
+         |             ```          |           x| \ `.:``.
+         |                         .'    /'   xXX|  `:`M`M':.
+         |    |                    ;    /:' xXXX'|  -'MMMMM:'
+         `.  .'                   :    /:'       |-'MMMM.-'
+          |  |                   .'   /'        .'MMM.-'
+          `'`'                   :  ,'          |MMM<
+            |                     `'            |tbap\
+             \                                  :MM.-'
+              \                 |              .''
+               \.               `.            /
+                /     .:::::::.. :           /
+               |     .:::::::::::`.         /
+               |   .:::------------\       /
+              /   .''               >::'  /
+              `',:                 :    .'
+*/
+.Hidden{
+  display: none;
+}
+
+@font-face
+{
+  font-family:HelveticaNL;
+  src:url(../Fonts/Helvetica.ttf);
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face{
+  font-family:Ventilla;
+  src:url(../Fonts/Ventilla.ttf); 
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{
+  font-family:DIN;
+  src:url(../Fonts/DINAlternateBold.ttf); 
+  font-weight: normal;
+}
+@font-face{
+  font-family:Zap;
+  src:url(../Fonts/Zapfino.ttf); 
+  font-weight: normal;
+}
+@font-face{
+  font-family:RobotoT;
+  src:url(../Fonts/Roboto-Thin.ttf); 
+  font-weight: normal;
+}
+@font-face{
+  font-family:RobotoL;
+  src:url(../Fonts/Roboto-Light.ttf); 
+  font-weight: normal;
+}
+@font-face{
+  font-family:RobotoB;
+  src:url(../Fonts/Roboto-Bold.ttf); 
+  font-weight: normal;
+}
+.H3{
+   font-family: RobotoT;
+   font-size: 20pt;
+}
+.trans{
+       transition:all .3s;
+  -moz-transition:all .3s;
+  -o-transition:all .3s;
+  -ms-transition:all .3s;
+  -webkit-transition:all .3s;
+}
+#where{
+    display:none;
+}
+.DownUnderE{
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    bottom: 0px;
+    padding-top: 50%;
+    background-color: rgba(100,100,100,.8);
+    bottom: 0px;
+    color:#fff;
+    font-family:RobotoL;
+    opacity: 0;
+       transition:all .3s;
+  -moz-transition:all .3s;
+  -o-transition:all .3s;
+  -ms-transition:all .3s;
+  -webkit-transition:all .3s;
+    z-index:-4;
+} 
+
+.Element:hover .DownUnderE{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    padding-top: 50%;
+    background-color: rgba(100,100,100,.8);
+    bottom: 0px;
+    color:#fff;
+    font-family:RobotoL;
+    opacity: 1;
+       transition:all .3s;
+  -moz-transition:all .3s;
+  -o-transition:all .3s;
+  -ms-transition:all .3s;
+  -webkit-transition:all .3s;
+} 
+.SpnBtn:hover{
+    text-decoration: underline;
+}
+.SpnBtn{
+    position: absolute;
+    width: 90%;
+    padding-top:10px;
+    padding-bottom:10px;
+    left:5%;
+    text-align: center;
+}
+.MenuItem .UnderLine{
+  position: relative;
+  opacity: 0;
+  background-color: #474747;
+  width: 100px;
+  height: 3px;
+  bottom: -10px;
+}
+.MenuItem:hover .UnderLine{
+  opacity: 1;
+}
+.MenuItem:hover .UnderLine2{
+  opacity: 1;
+}
+.MenuItem .UnderLine2{
+  position: relative;
+  opacity: 0;
+  background-color: #474747;
+  width: 100px;
+  height: 3px;
+  bottom: -1px;
+}
+#LNT{
+  font-family: Zap;
+  font-size: 8px;
+  text-transform:uppercase;
+}
+.Belonas{
+  font-family: DIN;
+  font-size: 30px;
+  position: fixed;
+  top: 7px;
+  margin-left: 7px;
+  color:#404040;
+  cursor:pointer;
+}
+.BSBelonas{
+   font-family: DIN;
+  font-size: 30px;
+  color:#333;
+  cursor:pointer;
+}
+.MenuHolderHero{
+  position: fixed;
+  left:0px;
+  top: 0px;
+  background-color: #fff;
+  border-bottom: solid 1px #000;
+  width: 100%;
+  height: 50px;
+  font-family:HelveticaNL;
+  z-index: 2;
+}
+.MenuHolder{
+  position: fixed;
+  display: inline-block;
+  left: calc(50% - 275px);
+  left: -moz-calc(50% - 275px);
+  left: -webkit-calc(50% - 275px);
+  left: -o-calc(50% - 275px);
+}
+.MenuItem{
+  cursor:pointer;
+  text-align: center;
+  display: inline-block;
+  color:#474747;
+  width: 100px;
+  margin-left: 10px;
+}
+.DownUnder{
+  background-color: #3d3d3d;
+  color:#fff;
+  width: 100%;
+  height: 20px;
+  position: fixed;
+  bottom: 0%;
+  left:0px;
+  text-align: center;
+  font-family: RobotoT;
+}
+.AlertJH{
+  display: none;
+   z-index: 10000;
+}
+.AlertJ{
+  display: block;
+   z-index: 10000;
+}
+.AlertControlCenterH{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(200,200,200,.8);
+ z-index: 9999;
+}
+.alertBody{
+  position: absolute;
+  left: calc(50% - 250px);
+  left: -moz-calc(50% - 250px);
+  left: -ms-calc(50% - 250px);
+  left: -o-calc(50% - 250px);
+  top: calc(50% - 125px);
+  top: -moz-calc(50% - 125px);
+  top: -o-calc(50% - 125px);
+  top: -ms-calc(50% - 125px);
+  background-color: rgb(250,250,250);
+  width: 500px;
+  height: 250px;
+  box-shadow: 1px 0px 10px rgb(200,200,200);
+   z-index: 10000;
+}
+.AlertTitle{
+  background-color:rgb(235,105,102);
+  color:#fff;
+  font-family: HelveticaNL;
+  font-size: 20px;
+  padding-top: 5px;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  text-align: center;
+}
+.AlertCont{
+  padding-top: 30px;
+  height: calc(100% - 30px);
+  height: -moz-calc(100% - 30px);
+  height: -ms-calc(100% - 30px);
+  height: -o-calc(100% - 30px);
+}
+#AlertContID{
+  position: absolute;
+  top: 50px;
+  width: 290px;
+  font-family: HelveticaNL;
+  text-align: justify;
+}
+.AlertButton{
+  cursor: pointer;
+  position: absolute;
+  right: 125px;
+  bottom: 30px;
+  background-color:rgb(235,105,102);
+  color:#fff;
+  width: 100px;
+  text-align: center;
+  font-family: HelveticaNL;
+  height: 30px;
+  padding-top: 10px;
+}
+
+
+
+/*resssssssspooooooonsssssssiiiiiiveeeee*/
+.MenuHolderHeroRes{
+  position: fixed;
+  left:0px;
+  top: 0px;
+  background-color: #3d3d3d;
+  width: 100%;
+  height: 50px;
+  font-family:HelveticaNL;
+  z-index: 2;
+  text-align: center;
+   transition:all .3s;
+  -moz-transition:all .3s;
+  -o-transition:all .3s;
+  -ms-transition:all .3s;
+  -webkit-transition:all .3s;
+}
+.MenuHolderRes{
+  position: static;
+  margin-top: 50px;
+  margin-left: -50px;
+}
+.MenuHolderHeroRes:hover{
+  position: fixed;
+  left:0px;
+  top: 0px;
+  background-color: #3d3d3d;
+  width: 100%;
+  height: 250px;
+  font-family:HelveticaNL;
+  z-index: 2;
+  text-align: center;
+   transition:all .3s;
+  -moz-transition:all .3s;
+  -o-transition:all .3s;
+  -ms-transition:all .3s;
+  -webkit-transition:all .3s;
+}
+.MenuItemRes{
+  position: relative;
+  cursor:pointer;
+  text-align: center;
+  display: none;
+  color:#FFF;
+  width: 100px;
+  margin-top: 15px;
+  margin-left: 50%;
+}
+.MenuItemRes:hover .UnderLine{
+  position: relative;
+  opacity: 1;
+  background-color: #d3d3d3;
+  width: 100px;
+  height: 3px;
+  bottom: -1px;
+   transition:all .3s;
+  -moz-transition:all .3s;
+  -o-transition:all .3s;
+  -ms-transition:all .3s;
+  -webkit-transition:all .3s;
+}
+.MenuItemRes:hover .UnderLine2{
+  position: relative;
+  opacity: 1;
+  background-color: #d3d3d3;
+  width: 100px;
+  height: 3px;
+  bottom: -1px;
+   transition:all .3s;
+  -moz-transition:all .3s;
+  -o-transition:all .3s;
+  -ms-transition:all .3s;
+  -webkit-transition:all .3s;
+}
+.MenuItem .UnderLine{
+  position: relative;
+  opacity: 0;
+  background-color: #d3d3d3;
+  width: 100px;
+  height: 3px;
+  bottom: -1px;
+}
+.MenuItemRes .UnderLine2{
+  position: relative;
+  opacity: 0;
+  background-color: #d3d3d3;
+  width: 100px;
+  height: 3px;
+  bottom: -1px;
+}
+.MenuHolderHeroRes:hover .MenuItemRes{
+  cursor:pointer;
+  text-align: center;
+  display: block;
+  color:#FFF;
+  width: 100px;
+  margin-left: 50%;
+}
+.ProfInfo{
+    width: 500px;
+height: 700px;
+border-radius: 10px;
+border: solid 1px #222;
+position: absolute;
+left: 50px;
+top: calc(50% - 350px);
+top: -moz-calc(50% - 350px);
+top: -webkit-calc(50% - 350px);
+text-align: center;
+}
+.Cover{
+    -webkit-filter: grayscale(1); -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%);
+filter: gray; filter: grayscale(100%);
+filter: url(desaturate.svg#greyscale);
+background-image: url('../Img/CoverDef.jpg');
+width: 500px;
+height: 250px;
+background-size: cover;
+border-top-right-radius: 10px;
+border-top-left-radius: 10px;
+padding-top: 50px;
+color:#fff;
+font-family: RobotoB;
+}
+.PP{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border:Solid 7px #FFF;
+    
+}
+.Cover:hover{
+     -webkit-filter: grayscale(0); -webkit-filter: grayscale(0%); -moz-filter: grayscale(0%);
+filter: gray; filter: grayscale(0%);
+}
+#prog:after{
+    content: "%";
+}
+.StatusBar{
+    width: 100%;
+    text-align: center;
+    font-family: RobotoL;
+}
+.StatusBar td{
+    border-left: solid 2px #222;
+    border-right: solid 2px #222;
+}
+.StatusBar tr:nth-child(2) td{
+    border-bottom: solid 2px #222;
+    padding-top: 5px;
+    font-family: RobotoB;
+}
+.achievement{
+    width: 70px;
+    height: 60px;
+    display: inline-block;
+}
+.EjList{
+    width: calc(100% - 800px);
+    height: 700px;
+border-radius: 10px;
+border: solid 1px #222;
+position: absolute;
+left: 600px;
+top: calc(50% - 350px);
+top: -moz-calc(50% - 350px);
+top: -webkit-calc(50% - 350px);
+text-align: center;
+font-family: RobotoL;
+color:#222;
+overflow-y: scroll;
+font-size: 15px;
+}
+.table td:hover{
+    cursor: pointer;
+}
+#NameHero{
+    font-family: RobotoL;
+    font-size: 25px;
+    display: none;
+}
