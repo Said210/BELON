@@ -47,6 +47,7 @@
    		LoadMain2();
    		ResponsiveStuff();
                 window.setTimeout('ResponsiveStuff()',100);
+                window.setTimeout(' LoadUA()',100);
 	}); 
 	</script>
         
@@ -59,9 +60,8 @@
     <div class="LatBar">
         <h3 class="H3">Unidades De Aprendizaje</h3>
         <br />
-        <table class="table table-hover">
-            <tr><td><span class="glyphicon glyphicon-briefcase"></span></td><td><span>Programación y servicios Web</span></td></tr>
-             <tr><td><span class="glyphicon glyphicon-briefcase"></span></td><td><span>Física</span></td></tr>
+        <table id="TableLBarCont" class="table table-hover">
+            
     </table> 
     </div>
     <div class="TopicC">

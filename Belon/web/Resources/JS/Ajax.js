@@ -41,3 +41,6 @@ function launchB(a){
     window.setTimeout(function(){window.location=a;},300);
     }
 }
+function LoadUA(){
+    $("#TableLBarCont").load('LoadUA');
+}

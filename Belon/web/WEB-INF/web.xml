@@ -2,7 +2,7 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>Connection</servlet-name>
-        <servlet-class>CTRL.Connection</servlet-class>
+        <servlet-class>Model.Connection</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>LogIn</servlet-name>
@@ -11,6 +11,18 @@
     <servlet>
         <servlet-name>LogOut</servlet-name>
         <servlet-class>CTRL.LogOut</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoadUA</servlet-name>
+        <servlet-class>View.LoadUA</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Conn</servlet-name>
+        <servlet-class>Model.Conn</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoadThemes</servlet-name>
+        <servlet-class>CTRL.LoadThemes</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Connection</servlet-name>
@@ -23,6 +35,18 @@
     <servlet-mapping>
         <servlet-name>LogOut</servlet-name>
         <url-pattern>/LogOut</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoadUA</servlet-name>
+        <url-pattern>/LoadUA</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Conn</servlet-name>
+        <url-pattern>/Conn</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoadThemes</servlet-name>
+        <url-pattern>/LoadThemes</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
