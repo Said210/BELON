@@ -65,14 +65,13 @@
     </table> 
     </div>
     <div class="TopicC">
-        <div class="TTitle">
-            <h3 class="H3" style="font-family: RobotoL">Física I</h3>
+        <div class="TTitle" id="TopicHeader">
+            
         </div>
         
         <section class="TCont">
-            <table class="table table-hover">
-                <tr><td>Estado</td><td>Nombre</td><td>Dificultad</td><td>Calificación</td></tr>
-               <tr class="bs-callout-danger" onclick="launch('Ej/PSW1.jsp')"><td><span class="glyphicon glyphicon-remove"></span></td><td>Cuetionario 1</td><td>1</td><td>0</td></tr></a>
+            <table class="table table-hover" id="EXHold">
+                
             </table>
         </section>
         

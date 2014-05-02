@@ -14,8 +14,8 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
           <ul class="nav navbar-nav">
-             <li><a href="../index.jsp">Inicio</a></li>
-            <li><a href="../UA.jsp">Unidades de aprendizaje</a></li>
+             <li><a href="../../index.jsp">Inicio</a></li>
+            <li><a href="../../UA.jsp">Unidades de aprendizaje</a></li>
              <%
             HttpSession Ses = request.getSession();
             try{
@@ -27,14 +27,14 @@
               out.print("<li class='dropdown'>"+
           "<a href='#' class='dropdown-toggle' data-toggle='dropdown'>"+PA+" "+MA+" "+Name+"<b class='caret'></b></a>"+
           "<ul class='dropdown-menu'>"+
-            "<li><a href=\"../Profile.jsp\">Perfil</a></li>"+
+            "<li><a href=\"../../Profile.jsp\">Perfil</a></li>"+
              "<li class='divider'></li>");
               if("2".equals(TU)){    
-                    out.print("<li><a href='../Prog.jsp'>Ver Progreso del grupo</a></li><li class='divider'></li>");
+                    out.print("<li><a href='../../Prog.jsp'>Ver Progreso del grupo</a></li><li class='divider'></li>");
                 }else{
-                  out.print("<li><a href='../Progreso.jsp'>Progreso</a></li><li class='divider'></li>");
+                  out.print("<li><a href='../../Progreso.jsp'>Progreso</a></li><li class='divider'></li>");
               }
-              out.print("<li><a href='../LogOut'>Sair</a></li>");
+              out.print("<li><a href='../../LogOut'>Sair</a></li>");
               out.print("</ul></li>");
              if("2".equals(TU)){
             out.print("<li><a href='#'>Usuario: Profesor</a></li>");

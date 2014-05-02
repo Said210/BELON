@@ -41,10 +41,10 @@ public class LoadUA extends HttpServlet {
         con.set = con.con.createStatement();
         con.rs = con.set.executeQuery("SELECT * FROM `Unidad De Aprendizaje` ");
         while(con.rs.next()){
-            out.print("<tr><td><span class=\"glyphicon glyphicon-briefcase\"></span></td><td><span>"+con.rs.getString("Nombre")+"</span></td></tr>");
+            out.print("<tr onclick=\"LoadTh('"+con.rs.getString("idUnidad")+"')\"><td><span class=\"glyphicon glyphicon-briefcase\"></span></td><td><span>"+con.rs.getString("Nombre")+"</span></td></tr>");
         }
         }catch(Exception e){
-            
+            System.out.print("Error en LoadUA "+e);
         }
        
     }

@@ -24,6 +24,10 @@
         <servlet-name>LoadThemes</servlet-name>
         <servlet-class>CTRL.LoadThemes</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LoadEx</servlet-name>
+        <servlet-class>View.LoadEx</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Connection</servlet-name>
         <url-pattern>/Connection</url-pattern>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>LoadThemes</servlet-name>
         <url-pattern>/LoadThemes</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoadEx</servlet-name>
+        <url-pattern>/LoadEx</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

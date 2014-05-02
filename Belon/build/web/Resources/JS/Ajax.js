@@ -24,7 +24,7 @@ function LoadMain2(){
 $('#Maind').load('Resources/Main/Main.jsp');
 }	
 function LoadMain3(){
-$('#Maind').load('../Resources/Main/Main2.jsp');
+$('#Maind').load('../../Resources/Main/Main2.jsp');
 }
 
 function launch(a){
@@ -32,6 +32,9 @@ function launch(a){
 }
 function juroSolemnemente(){
  $(".FormHolder").css("opacity","1");
+}
+function juroSolemnemente2(){
+ $(".EjHolder").css("opacity","1");
 }
 function launchB(a){
     var d=a;
@@ -43,4 +46,7 @@ function launchB(a){
 }
 function LoadUA(){
     $("#TableLBarCont").load('LoadUA');
+}
+function LoadTh(a){
+    $("#TopicHeader").load('LoadThemes?th='+a);
 }

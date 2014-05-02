@@ -16,7 +16,7 @@
     
             HttpSession Ses = request.getSession();
             if(Ses.getAttribute("Nombre")==null){ 
-             out.println("<script type='text/javascript'>window.location='index.jsp';</script>");
+             out.println("<script type='text/javascript'>window.location='../../index.jsp';</script>");
             }else{
                 Name =(String) Ses.getAttribute("Nombre");
                 Ap =(String) Ses.getAttribute("Ap");
@@ -28,16 +28,17 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Perfil | <%= Name %></title>
-        <link rel="stylesheet" href="../Resources/Style/Swaggy.css">
-	<link rel="stylesheet" href="../Resources/Style/MainStyle.css">
-        <link rel="stylesheet" href="../Resources/Style/ScrollexByBP.css">
-	<script type="text/javascript" src="../Resources/JS/Ajax.js"></script>
-        <script type="text/javascript" src="../Resources/JS/JQuery.js"></script>
-	<script type="text/javascript" src="../Resources/JS/Res.js"></script> 
-	<script type="text/javascript" src="../Resources/JS/Alert.js"></script>
-        <script type="text/javascript" src="../Resources/JS/BLaunch.js"></script>
-        <link rel="stylesheet" href="../Resources/Bootstrap/css/bootstrap.css">
-        <script type="text/javascript" src="../Resources/Bootstrap/js/bootstrap.js"></script>
+        <link rel="stylesheet" href="../../Resources/Style/Swaggy.css">
+	<link rel="stylesheet" href="../../Resources/Style/MainStyle.css">
+        <link rel="stylesheet" href="../../Resources/Style/Forms.css">
+        <link rel="stylesheet" href="../../Resources/Style/ScrollexByBP.css">
+	<script type="text/javascript" src="../../Resources/JS/Ajax.js"></script>
+        <script type="text/javascript" src="../../Resources/JS/JQuery.js"></script>
+	<script type="text/javascript" src="../../Resources/JS/Res.js"></script> 
+	<script type="text/javascript" src="../../Resources/JS/Alert.js"></script>
+        <script type="text/javascript" src="../../Resources/JS/BLaunch.js"></script>
+        <link rel="stylesheet" href="../../Resources/Bootstrap/css/bootstrap.css">
+        <script type="text/javascript" src="../../Resources/Bootstrap/js/bootstrap.js"></script>
 	<meta name="viewport" content="width=device-width">
         <script type="text/javascript">
 	
@@ -46,6 +47,7 @@
    		LoadMain3();
    		ResponsiveStuff();
                 window.setTimeout('ResponsiveStuff()',100);
+                window.setTimeout('juroSolemnemente2()',100);
 	}); 
 	</script>
         <script language="JavaScript">
@@ -134,7 +136,7 @@ function test(form) {
     <body>
     <div id="Maind"></div>
         <div class="row" align="center" style="margin-top: 100px;">
-	<div class="col-md-6 col-md-offset-3 FormHolder">
+	<div class="col-md-6 col-md-offset-3 EjHolder">
             <form>
     <h2 align="center">Cuestionario 1 | Física</h2>
     
