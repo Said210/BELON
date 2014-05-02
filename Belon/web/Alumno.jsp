@@ -19,6 +19,7 @@
 	<script type="text/javascript" src="Resources/JS/Alert.js"></script>
         <script type="text/javascript" src="Resources/JS/BLaunch.js"></script>
         <script type="text/javascript" src="Resources/JS/Validaciones.js"></script>
+        <script type="text/javascript" src="Resources/JS/0b5500bac02d9451a386826277432a7d.js"></script>
 	<script type="text/javascript">
 	
 	$(window).bind('load', function(){
@@ -71,7 +72,7 @@
 		</td></tr>	
 		<tr><td>Correo: </td><td> <input class="trans" type="email" name="User" id="User" maxlength="50"></td></tr>
                 <tr><td>Password: </td><td> <input class="trans" type="password" name="Pass" id="Pass" maxlength="20"></td></tr>
-		<tr><td colspan="2" align="center"><input class="trans" type="button" onclick="Alumnos()" name="Enviar" value="Enviar">&nbsp;&nbsp;
+		<tr><td colspan="2" align="center"><input class="trans" type="button" onclick="launchMail()" name="Enviar" value="Enviar">&nbsp;&nbsp;
                         <input class="trans" onclick="launchB('inicio.jsp')" type="button" value="Iniciar Sesion" /></td></tr>
 		</table>
 	</form></div>	
