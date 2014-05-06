@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand"><span class="BSBelonas" onclick="launchB('../index.jsp')">B E L &Oslash; N</span></a>
+          <a class="navbar-brand"><span class="BSBelonas" onclick="launchB('../../index.jsp')">B E L &Oslash; N</span></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

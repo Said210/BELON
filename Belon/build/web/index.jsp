@@ -30,7 +30,8 @@
 			//alert('es chrome');
 		}
                 window.setTimeout('ResponsiveStuff()',100);
-	}); 
+	});
+        
 	</script>
 	<link rel="shortcut icon" href="Resources/Power/favicon.ico" />
 </head>
@@ -50,13 +51,13 @@
     <div id="Maind"></div><img src="Resources/Img/StudentBW.jpg" class="Hidden" /><img src="Resources/Img/TeacherBW.jpg" class="Hidden" /><img src="Resources/Img/OtherBW.jpg" class="Hidden" />
 
 <div class="Element1 Element" id="A" draggable="false">
-    <div class="Text" id="a1"><span class="TextCont">Profesores</span><div class="DownUnderE" id="Element1Cont"><span class="SpnBtn" onclick="indexLaunch('inicio.jsp')">Iniciar Sesi&oacute;n</span><br /><br /><br /><span class="SpnBtn" onclick="indexLaunch('Profesor.jsp')">Registrarse</span></div></div>
+    <div class="Text" id="a1" onclick="indexLaunch('inicio.jsp')"><span class="TextCont">Profesores</span><div class="DownUnderE" id="Element1Cont"><span class="SpnBtn" onclick="indexLaunch('inicio.jsp')">Iniciar Sesi&oacute;n</span><br /><br /><br /><span class="SpnBtn" onclick="indexLaunch('Profesor.jsp')">Registrarse</span></div></div>
 		</div>
 		<div class="Element2 Element" id="B">
-			<div class="Text" id="b1"><span class="TextCont">Alumnos</span><div class="DownUnderE" id="Element1Cont"><span class="SpnBtn" onclick="indexLaunch('inicio.jsp')">Iniciar Sesi&oacute;n</span><br /><br /><br /><span class="SpnBtn" onclick="indexLaunch('Alumno.jsp')">Registrarse</span></div></div>
+			<div class="Text" id="b1" onclick="indexLaunch('inicio.jsp')"><span class="TextCont">Alumnos</span><div class="DownUnderE" id="Element1Cont"><span class="SpnBtn" onclick="indexLaunch('inicio.jsp')">Iniciar Sesi&oacute;n</span><br /><br /><br /><span class="SpnBtn" onclick="indexLaunch('Alumno.jsp')">Registrarse</span></div></div>
 		</div>
 		<div class="Element3 Element" id="C">
-			<div class="Text" id="c1"><span class="TextCont">Otros</span></div>
+			<div class="Text" id="c1" onclick="indexLaunch('inicio.jsp')"><span class="TextCont">Otros</span></div>
 		</div>
 		<div id="where">index</div>
 </body>

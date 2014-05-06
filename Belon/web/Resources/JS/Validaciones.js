@@ -7,8 +7,8 @@ function Prof(){
             B=document.Profe.Nom.value,
             C=document.Profe.Pat.value,
             D=document.Profe.Mat.value,
-            E=document.Profe.Cor.value,
-            F=document.Profe.Cont.value,
+            E=document.Profe.User.value,
+            F=document.Profe.Pass.value,
             expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/,
             let = "ABCDEFGHIJKLMNOPQRSTUVWXYZ \u00e1\u00e9 \u00ed \u00f3 \u00fa \u00c1 \u00c9 \u00cd \u00d3 \u00da \u00f1 \u00d1" + "abcdefghijklmnopqrstuvwxyz\u00e1\u00e9 \u00ed \u00f3 \u00fa \u00c1 \u00c9 \u00cd \u00d3 \u00da \u00f1 \u00d1",
             num="0123456789",
@@ -120,10 +120,10 @@ function Prof(){
 		return (false);}
 
   	if (E=="") {
-		txt="El campo \"Correo\" esta vacio\n";
+		txt="El campo \"Userreo\" esta vacio\n";
 		txt+="Este campo es obligatorio";
 		alert(txt);
-		document.Profe.Cor.focus();
+		document.Profe.User.focus();
 		return (false);
 		all=false;
 		}
@@ -150,7 +150,7 @@ function Prof(){
 		txt="El campo \"Comtraseña\" esta vacio\n";
 		txt+="Este campo es obligatorio\n";
 		alert(txt);
-		document.Profe.Cont.focus();
+		document.Profe.Pass.focus();
 		return (false);
 		all=false;
 		}
@@ -162,7 +162,7 @@ function Prof(){
 		for (j = 0; j < esp.length; j++)
 			if (chi == esp.charAt(j))
 		break;
-		if (j == esp.length) {
+		if (j != esp.length) {
 		all = false;
 		break;
 		}
@@ -172,13 +172,15 @@ function Prof(){
 		txt="Evite colocar los siguientes caracteres en contraseña:\n";
 		txt+=esp;
 		alert(txt);
-		document.Profe.Cont.focus();
+		document.Profe.Pass.focus();
 		return (false);
 			  }
         }}}}}}
 			
 	if (all!=false){
+            $('#Prof').attr('action','RegProf');
 		document.Profe.submit();
+                
 	}
 }
 
@@ -204,6 +206,7 @@ function Alumnos(){
 		txt+="Este campo es obligatorio\n";
 		alert(txt);
 		document.Morro.Nom.focus();
+                $("#Nombre").css('background','rgb(250,200,200)');
 		return (false);
 		all=false;
 	}
@@ -223,12 +226,14 @@ function Alumnos(){
 		txt="Escriba solo letras en el campo \"Nombre\"";
 		alert(txt);
 		document.Morro.Nom.focus();
+                $("#Nombre").css('background','rgb(250,200,200)');
 		return (false);}
         if (B=="") {
 		txt="El campo \"Apellido paterno\" esta vacio\n";
 		txt+="Este campo es obligatorio\n";
 		alert(txt);
 		document.Morro.Pat.focus();
+                $("#Appat").css('background','rgb(250,200,200)');
 		return (false);
 		all=false;
 	}
@@ -248,12 +253,14 @@ function Alumnos(){
 		txt="Escriba solo letras en el campo \"Apellido paterno\"";
 		alert(txt);
 		document.Morro.Pat.focus();
+                 $("#Appat").css('background','rgb(250,200,200)');
 		return (false);}
         if (C=="") {
 		txt="El campo \"Apellido materno\" esta vacio\n";
 		txt+="Este campo es obligatorio\n";
 		alert(txt);
 		document.Morro.Mat.focus();
+                 $("#Apmat").css('background','rgb(250,200,200)');
 		return (false);
 		all=false;
 	}
@@ -273,6 +280,7 @@ function Alumnos(){
 		txt="Escriba solo letras en el campo \"Apellido materno\"";
 		alert(txt);
 		document.Morro.Mat.focus();
+                $("#Apmat").css('background','rgb(250,200,200)');
 		return (false);}
             
 	if (D==""){
@@ -280,6 +288,7 @@ function Alumnos(){
 		txt+="Coloque uno...\n";
 		alert(txt);
 		document.Morro.User.focus();
+                $("#User").css('background','rgb(250,200,200)');
 		return (false);
 		all=false;
 	}
@@ -289,6 +298,7 @@ function Alumnos(){
 		txt="Los correos no contienen \"www\"";
 		alert(txt);
 		document.Morro.User.focus();
+                $("#User").css('background','rgb(250,200,200)');
 	    return false;
 	}
 	else if ( !expr.test(D) ){
@@ -304,6 +314,7 @@ function Alumnos(){
 	    txt+= "Usuario@dominio.xx";
 	    alert(txt);
 	    document.Morro.User.focus();
+            $("#User").css('background','rgb(250,200,200)');
 	    return (false);
 	              }
 
@@ -312,6 +323,7 @@ function Alumnos(){
 		txt+="Este campo es obligatorio\n";
 		alert(txt);
 		document.Morro.Pass.focus();
+                $("#Pass").css('background','rgb(250,200,200)');
 		return (false);
 		all=false;
 	}
@@ -322,7 +334,7 @@ function Alumnos(){
 		for (j = 0; j < esp.length; j++)
 			if (chi == esp.charAt(j))
 		break;
-		if (j == esp.length) {
+		if (j != esp.length) {
 		all = false;
 		break;
 		}
@@ -333,14 +345,15 @@ function Alumnos(){
         txt+=esp;
 		alert(txt);
 		document.Morro.Pass.focus();
-		return (false);}
+                $("#Pass").css('background','rgb(250,200,200)');
+		return (false);
+            }
 
         }}}}}
 			
 	if (all!=false){
-		txt="tus datos se han enviado correctamente"
-		alert(txt);
-		Morro.submit();
-		Morro.reset();
+            $('#RegAlumno').attr('action','RegAlumno');
+            launchMail();
+                
 	}
 }

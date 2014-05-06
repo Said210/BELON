@@ -45,7 +45,7 @@
         <div class="FormHolder" align="center">
         <span class="title">Registrar Profesor</span>
         
-        <form name="Profe">
+        <form name="Profe" method="POST" id="Prof">
         	<table align="center" cellspacing="10">
         		<tr>
         			<td>No. Empleado: </td>
@@ -54,9 +54,9 @@
         		<tr>
         	<td>Materia Impartida:</td>
         	<td>
-        	<label class="select"><select>
-        		<option>PSW</option>
-        		<option>FÃ­sica I</option>
+        	<label class="select"><select name="Mate">
+        		<option value="PSW">PSW</option>
+        		<option value="Fisica 1">Física I</option>
         	</select></label></td></tr>
         	<tr>
         	<td>Nombre: </td><td><input class="trans" type="text" name="Nom" maxlength="20"></td>
@@ -69,16 +69,16 @@
         	</tr>
         	<tr>
         	<td>Sexo: </td>
-        	<td><label class="select"><select>
+        	<td><label class="select"><select name="Sexo">
         		<option>Masculino</option>
         		<option>Femenino</option>
             </select></label></td>
             </tr>
             <tr>
-                <td>Correo: </td><td><input class="trans" type="text" name="Cor" maxlength="50"></td>
+                <td>Correo: </td><td><input class="trans" type="text" name="User" maxlength="50"></td>
         	</tr>
         	<tr>
-                    <td>ContraseÃ±a: </td><td><input class="trans" type="password" name="Cont" maxlength="20"></td>
+                    <td>Contraseña: </td><td><input class="trans" type="password" name="Pass" maxlength="20"></td>
         	</tr>
         	<tr>
         	<td colspan="2" align="center">

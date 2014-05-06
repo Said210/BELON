@@ -28,6 +28,18 @@
         <servlet-name>LoadEx</servlet-name>
         <servlet-class>View.LoadEx</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RegAlumno</servlet-name>
+        <servlet-class>CTRL.RegAlumno</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RegProf</servlet-name>
+        <servlet-class>CTRL.RegProf</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetInfo</servlet-name>
+        <servlet-class>CTRL.GetInfo</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Connection</servlet-name>
         <url-pattern>/Connection</url-pattern>
@@ -55,6 +67,18 @@
     <servlet-mapping>
         <servlet-name>LoadEx</servlet-name>
         <url-pattern>/LoadEx</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegAlumno</servlet-name>
+        <url-pattern>/RegAlumno</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegProf</servlet-name>
+        <url-pattern>/RegProf</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetInfo</servlet-name>
+        <url-pattern>/GetInfo</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -1,5 +1,6 @@
 package CTRL;
 
+import Model.Conn;
 import java.io.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -19,29 +20,63 @@ public class LogIn extends HttpServlet
        String user=req.getParameter("User");
        String pw=req.getParameter("Pass");
        
-       if("diego.210@hotmail.es".equals(user) && "FirstDance".equals(pw)){
-            HttpSession sesion = req.getSession(true);
-             sesion.setAttribute("Nombre","Diego Said");
-             sesion.setAttribute("Ap","Pelaez");
-             sesion.setAttribute("Am","Tellitud");
+       Conn conn = new Conn();
+       conn.conectar();
+       
+      GetInfo inf = new GetInfo();
+      HttpSession sesion = req.getSession(true);
+       String Nom;
+          String Pa = null;
+          String Ma = null;
+          String TU = null;
+          String DATA = null;
+            PrintWriter out = res.getWriter();
+        res.setContentType("text/html");
+      try{
+          String Chain="SELECT * FROM usuario WHERE Mail='"+user+"' AND Contrasena='"+pw+"';";
+         conn.set = conn.con.createStatement();
+              conn.rs = conn.set.executeQuery(Chain);
+          if(!conn.rs.next()){
+               res.sendRedirect("inicio.jsp?Er=true");
+          }else{
+                  Nom=conn.rs.getString("Nombre");
+                   System.out.print(Nom);
+                  Pa=conn.rs.getString("APat");
+                  System.out.print(Pa);
+                  Ma=conn.rs.getString("AMat");
+                  System.out.print(Ma);
+                  TU=conn.rs.getString("Level");
+                  System.out.print(TU);
+                  
+                  if("1".equals(TU)){
+                    DATA=inf.GetB(user);
+                        }else{
+                    DATA=inf.GetNE(user);
+                    }
+                  
+           
+              
+              sesion.setAttribute("Nombre",Nom);
+              System.out.print(Nom);
+             sesion.setAttribute("Ap",Pa);
+               System.out.print(Pa);
+             sesion.setAttribute("Am",Ma);
+               System.out.print(Ma);
              sesion.setAttribute("Mail",user);
-             sesion.setAttribute("TU","1");
-             sesion.setAttribute("DATA","4IV7");
+                System.out.print(user);
+             sesion.setAttribute("TU",TU);
+               System.out.print(TU);
+             sesion.setAttribute("DATA",DATA);
+                System.out.print(DATA);
+            
+              
              res.sendRedirect("Profile.jsp");
-       }else{
-           if("hola@mundo.java".equals(user) && "C++B".equals(pw)){
-            HttpSession sesion = req.getSession(true);
-             sesion.setAttribute("Nombre","Mario Ivan");
-             sesion.setAttribute("Ap","Garcia");
-             sesion.setAttribute("Am","Flores");
-             sesion.setAttribute("Mail",user);
-             sesion.setAttribute("TU","2");
-             sesion.setAttribute("DATA","Dibujo Técnico");
-             res.sendRedirect("Profile.jsp");
-       }else{
-           res.sendRedirect("inicio.jsp?Er=true");
-       }
-       }
+          }
+      }catch(SQLException | IOException E){
+          System.out.print("Error en Log "+E);
+      }
+       
+       
   }
   
   // Devuelve una descripción breve.

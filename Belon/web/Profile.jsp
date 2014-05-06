@@ -4,6 +4,8 @@
     Author     : Diego
 --%>
 
+<%@page import="CTRL.GetInfo"%>
+<%@page import="Model.Conn"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
@@ -13,6 +15,11 @@
     String Ap="";
     String Am="";
     String Data="";
+    String TU="";
+    String Mail="";
+     Conn con=new Conn();
+                GetInfo inf = new GetInfo();
+                
             HttpSession Ses = request.getSession();
             if(Ses.getAttribute("Nombre")==null){ 
              out.println("<script type='text/javascript'>window.location='index.jsp';</script>");
@@ -20,7 +27,12 @@
                 Name =(String) Ses.getAttribute("Nombre");
                 Ap =(String) Ses.getAttribute("Ap");
                 Am =(String) Ses.getAttribute("Am");
-                Data =(String) Ses.getAttribute("DATA");
+                Mail =(String) Ses.getAttribute("Mail");
+                 if("1".equals(TU)){
+                    Data=inf.GetNE(Mail);
+                        }else{
+                    Data=inf.GetG(Mail);
+                    }
             }
         %>
     
@@ -53,6 +65,9 @@
 		}
                 window.setTimeout('ResponsiveStuff()',100);
 	}); 
+        function holis(a){
+        $(a).popover('toggle');
+        }
 	</script>
 	<link rel="shortcut icon" href="Resources/Power/favicon.ico" />
     </head>
@@ -74,7 +89,7 @@
     <div class="ProfInfo">
     <section class="Cover trans">
         <img src="Resources/Img/ProfileDef.jpg" id="PP" class="PP" />
-        <br /><span id="Name"><%=Name%></span> <br /><span id="Gr"><%=Data%></span>
+        <br /><span id="Name"><%=Name+" "+Ap%></span> <br /><span id="Gr"><%=Data%></span>
     </section>
         <table class="StatusBar" cellspacing="0">
             <tr>
@@ -84,13 +99,9 @@
                 <td id="prog">100</td><td id="Nej">6</td><TD id="Gall">6</TD>
             </tr>
         </table>
-        <img class="achievement" src="Resources/Img/achievement.png" />
-        <img class="achievement" src="Resources/Img/achievement.png" />
-        <img class="achievement" src="Resources/Img/achievement.png" />
-        <img class="achievement" src="Resources/Img/achievement.png" />
-        <img class="achievement" src="Resources/Img/achievement.png" />
-        <img class="achievement" src="Resources/Img/achievement.png" />
-        
+    <div id="CookiesPlace">
+        <%=inf.GetCookies(Mail)%>
+    </div>    
     </div>
     <div class="EjList trans">
         <div id="NameHero"><%=Name%>&nbsp;<%=Ap%>&nbsp;<%=Am%> - <%= Data%></div>

@@ -26,6 +26,10 @@ $('#Maind').load('Resources/Main/Main.jsp');
 function LoadMain3(){
 $('#Maind').load('../../Resources/Main/Main2.jsp');
 }
+function LoadMain4(){
+$('#Maind').load('../../Resources/Main/Main_1.html');
+}
+
 
 function launch(a){
  window.location=a;
